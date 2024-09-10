@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+          body{
+            margin:0px;
+            padding:0px;
+            background-color: rgb(0, 200, 255);
+        }
+        .container{
+            border:3px solid black;
+            padding-left:60px;
+            padding-right:60px;
+            margin-top:110px;
+            background-color:white;
+            height:320px;
+            width:50%;
+            border-radius:5%;
+        }
+        .one{
+    font-weight:900;
+    font-size:30px;
+}
+.two{
+    font-size:25px;
+    font-weight:800;
+}
+.three{
+    margin-top:25px;
+    font-size:35px;
+}
+button{
+    margin-top:25px;
+    background-color:green;
+    color:white;
+    height:35px;
+    border-radius:50%;
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <div class="container">
+      <div class="one">final result </div>
+         <div class="two">Congrats</div>
+   <div class="three">🎉🥳🎊🎁</div>
+   <button>generate</button>
+    </div>
+</center>
+<script>
+    let age = sessionStorage.getItem('age');
+    console.log(age);
+    let age1=age;
+    let far=age*20;
+    let button=document.querySelector("button");
+    let one=document.querySelector(".three");
+    button.addEventListener("click",()=>{
+        let div=document.createElement("div");
+    let body=document.querySelector("body");
+    body.appendChild(div);
+    div.innerText=`you successfully got ${far}%`;
+    one.appendChild(div);
+    });
+</script>
+</body>
+</html>
